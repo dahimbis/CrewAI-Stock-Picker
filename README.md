@@ -66,3 +66,49 @@ Other companies like FlutterFlow and Cohere are marked as “Not Selected” wit
 ### 6. Alternative Final Decision Example
 In another run, the system selects **Supabase** as the strongest investment option, with clear reasoning and comparisons.
 ![Final Decision Example 2](Final_decisions.png)
+
+## 🧠 Adding Memory to the Crew
+
+In the updated version, we enhanced the crew with **memory modules**:
+- **Short Term Memory** → Keeps track of recent interactions within a single execution.
+- **Long Term Memory** → Stores knowledge in persistent SQLite storage.
+- **Entity Memory** → Helps agents remember entities like company names, tickers, and contexts across runs.
+
+This upgrade allows agents to avoid repeating results, recall previously analyzed companies, and build on past insights.
+
+---
+
+### 🔹 Example Run with Memory
+
+#### 1. Memory Retrieval in Action
+When starting a task, agents now query **Long Term, Short Term, and Entity Memory** before searching the internet.
+![Memory Retrieval](Memory1.png)
+
+---
+
+#### 2. Delegation with Memory Context
+The **Financial News Analyst** agent leverages both memory and Serper searches to find **new companies** not seen before.
+![Delegation with Memory](memory2.png)
+
+---
+
+#### 3. Compiled Insights from Memory + Search
+The agent produces a refined list of trending companies, enhanced by past stored results.
+![Insights with Memory](memory3.png)
+
+---
+
+#### 4. Final Investment Decision
+The crew selects **Anthropic** as the best investment, with full rationale and clear reasoning.  
+Memory ensures companies already evaluated aren’t re-selected unnecessarily.
+![Final Decision with Memory](memory4.png)
+
+---
+
+## 📈 Why Memory Matters
+- Prevents duplication (agents don’t pick the same company in repeated runs).  
+- Builds continuity — the system “remembers” companies and insights across executions.  
+- Strengthens decision-making by blending **retrieved memory** with **new search results**.  
+
+This makes the Stock Picker Crew **smarter and more reliable over time**, moving closer to a real analyst assistant rather than just a stateless script.
+
