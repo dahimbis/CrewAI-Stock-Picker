@@ -94,7 +94,7 @@ The **Financial News Analyst** agent leverages both memory and Serper searches t
 
 #### 3. Compiled Insights from Memory + Search
 The agent produces a refined list of trending companies, enhanced by past stored results.
-![Insights with Memory](memory3.png)
+![Insights with Memory](Memory3.png)
 
 ---
 
